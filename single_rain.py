@@ -32,7 +32,7 @@ class Rain():
             self.drops[0].y = self.start
             self.leads.append(0)
             self.drops[0].color = self.default_lead_color
-            self.time = (random.random()) + 2
+            self.time = (random.random()) + (project_runner.back.scale_y * 3)
             pyglet.clock.schedule_once(self.stop_update, self.time)
             
     def golden(self):

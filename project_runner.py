@@ -9,9 +9,11 @@ from single_rain import Rain
 from pyglet.libs.win32.constants import SPI_SETDESKWALLPAPER, SPIF_UPDATEINIFILE
 
 back = pyglet.sprite.Sprite(img=pyglet.image.load('MatrixWallpaper.jpg'))
-back.x = -250
 back.opacity = 128
 window = pyglet.window.Window(fullscreen=True)
+back.scale_y = window.height / back.height
+print(back.scale_y)
+back.scale_x = window.width / back.width
 rain_streaks = []
 
 def spawn(dt):
